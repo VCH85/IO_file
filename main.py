@@ -11,8 +11,7 @@ def upload():
         response = requests.post("https://file.io", files = files)
         if response.status_code == 200:
             link = response.json()["link"]
-            entry.insert((0,link))
-
+            entry.insert(0,link)
 
 
 window = Tk()
